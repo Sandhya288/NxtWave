@@ -1,0 +1,62 @@
+import React from 'react';
+import { StyleSheet, View, Text, Image } from 'react-native';
+
+const AddItem = () => {
+  const image = require('./AddItem.png');
+  
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Item Details</Text>
+      <Image source={image} style={styles.image} />
+      <View style={styles.details}>
+        <Text style={styles.detail}>ITEM TITLE</Text>
+        <Text style={styles.detail}>IB studio trainees</Text>
+        <Text style={styles.detail}>LINK</Text>
+        <Text style={styles.detail}>www.slack.il studio trainees.com</Text>
+        <Text style={styles.detail}>ICON URL</Text>
+        <Text style={styles.detail}>www.slack.IB studio trainees.com</Text>
+        <Text style={styles.detail}>TAG NAME</Text>
+        <Text style={styles.detail}>User</Text>
+        <Text style={styles.detail}>CATEGORY</Text>
+        <Text style={styles.detail}>slack</Text>
+        <Text style={styles.detail}>DESCRITION</Text>
+        <Text style={styles.detail}>This chaneel is for iB studio trainees
+          team.</Text>
+      </View>
+      <button style={styles.create}>CREATE</button>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  image: {
+    width: '100%',
+    height: 200,
+    marginBottom: 20,
+  },
+  details: {
+    marginBottom: 20,
+  },
+  detail: {
+    fontSize: 16,
+    marginBottom: 5,
+  },
+  create: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#000000',
+    marginBottom: 20,
+  },
+});
+
+export default AddItem
