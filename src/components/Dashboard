@@ -1,0 +1,80 @@
+import React, { useState } from 'react';
+
+const Dashboard = () => {
+  const [resources, setResources] = useState([
+    {
+      name: 'Dropbox, Inc.',
+      type: 'Cloud Services',
+      url: 'www.dropbox.com',
+    },
+    {
+      name: 'Slack',
+      type: 'Cloud Services',
+      url: 'www.slack.com',
+    },
+  ]);
+
+  const [requests, setRequests] = useState([
+    {
+      name: 'Dropbox, Inc.',
+      type: 'Cloud Services',
+      url: 'www.dropbox.com',
+    },
+    {
+      name: 'Slack',
+      type: 'Cloud Services',
+      url: 'www.slack.com',
+    },
+  ]);
+
+  const [users, setUsers] = useState([
+    {
+      name: 'Dropbox, Inc.',
+      type: 'Cloud Services',
+      url: 'www.dropbox.com',
+    },
+    {
+      name: 'Slack',
+      type: 'Cloud Services',
+      url: 'www.slack.com',
+    },
+  ]);
+
+  return (
+    <div className="dashboard">
+      <h1>NXT Dashboard</h1>
+      <div className="resources">
+        <h2>Resources</h2>
+        <ul>
+          {resources.map((resource) => (
+            <li key={resource.name}>
+              <a href={resource.url}>{resource.name}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="requests">
+        <h2>Requests</h2>
+        <ul>
+          {requests.map((request) => (
+            <li key={request.name}>
+              <a href={request.url}>{request.name}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="users">
+        <h2>Users</h2>
+        <ul>
+          {users.map((user) => (
+            <li key={user.name}>
+              <a href={user.url}>{user.name}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
